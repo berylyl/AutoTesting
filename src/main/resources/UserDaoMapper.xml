@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserDao">
+
+	<resultMap type="user" id="userResultMap">
+		<id property="uid" column="USER_ID" />
+		<result property="uname" column="USER_NAME" />
+	</resultMap>
+
+	<!-- 查询学生，根据id -->
+	<select id="getUser" parameterType="String" resultType="bean.User"
+		resultMap="userResultMap">
+		<![CDATA[
+			SELECT * from USER ST
+				WHERE ST.USER_id = #{studentID} 
+		]]>
+	</select>
+
+	<!-- 查询学生列表 -->
+	<select id="findUserAll" resultType="bean.User" resultMap="userResultMap">
+		<![CDATA[
+			SELECT * from USER;
+		]]>
+	</select>
+
+</mapper>
