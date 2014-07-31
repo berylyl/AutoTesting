@@ -18,5 +18,5 @@ if [ -z "$APP_CLASSPATH" ]; then
        APP_CLASSPATH=`buildclasspath lib`
 fi
 APP_CLASSPATH=bin/:$APP_CLASSPATH
-#echo $APP_CLASSPATH
-$JAVA_BIN -classpath $APP_CLASSPATH main.java.lesson1.ExampleBrowser $*
+echo $APP_CLASSPATH
+$JAVA_BIN -classpath $APP_CLASSPATH lesson1.ExampleBrowser $*
