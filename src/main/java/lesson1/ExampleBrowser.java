@@ -66,5 +66,6 @@ public class ExampleBrowser {
 		ExampleBrowser  br = new ExampleBrowser(new FirefoxDriver());
 		br.open();
 		br.DoRequest();
+		br.close();
 	}
 }
