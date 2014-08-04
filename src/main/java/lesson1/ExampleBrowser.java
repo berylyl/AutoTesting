@@ -62,10 +62,10 @@ public class ExampleBrowser {
 
 	public static void main(String[] args) {
 		//ExampleBrowser  br = new ExampleBrowser(new ChromeDriver());
-		/*ExampleBrowser  br = new ExampleBrowser(new FirefoxDriver());
+		ExampleBrowser  br = new ExampleBrowser(new FirefoxDriver());
 		br.open();
 		br.DoRequest();
-		br.close();*/
-		System.out.println("ddddddddddd");
+		br.close();
+		//System.out.println("ddddddddddd");
 	}
 }
