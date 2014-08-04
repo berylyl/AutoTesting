@@ -3,12 +3,10 @@ package lesson1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.mysql.jdbc.Driver;
 
 public class ExampleBrowser {
 
@@ -25,6 +23,7 @@ public class ExampleBrowser {
 		
 		// 获取 网页的 title
 		System.out.println("1 Page title is: " + driver.getTitle());
+		System.out.println(".......");
 	}
 	
 	public void DoRequest() {
@@ -65,7 +64,7 @@ public class ExampleBrowser {
 		//ExampleBrowser  br = new ExampleBrowser(new ChromeDriver());
 		ExampleBrowser  br = new ExampleBrowser(new FirefoxDriver());
 		br.open();
-		br.DoRequest();
-		br.close();
+		//br.DoRequest();
+		//br.close();
 	}
 }
