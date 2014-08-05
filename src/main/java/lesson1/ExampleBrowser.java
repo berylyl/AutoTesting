@@ -64,7 +64,11 @@ public class ExampleBrowser {
 		//ExampleBrowser  br = new ExampleBrowser(new ChromeDriver());
 		ExampleBrowser  br = new ExampleBrowser(new FirefoxDriver());
 		br.open();
+<<<<<<< HEAD
 		br.DoRequest();
+=======
+		//br.DoRequest();
+>>>>>>> dda96e9605c909557ce1285507a93c232531c089
 		br.close();
 		//System.out.println("ddddddddddd");
 	}
