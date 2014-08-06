@@ -241,6 +241,22 @@
 			<artifactId>selenium-java</artifactId>
 			<version>2.42.2</version>
 		</dependency>
+		<!-- selenium end -->
+		<!-- dom4j begin -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<!-- dom4j end -->
+		<!-- httpclient end -->
+		<dependency>
+			<!-- only needed for SecuredMain example -->
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<!-- httpclinet end -->
 
 	</dependencies>
 
