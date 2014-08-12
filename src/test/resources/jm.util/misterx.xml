@@ -1,0 +1,12 @@
+<user>
+	<absoluteUrl>http://169.254.49.150:8081/user/test</absoluteUrl>
+	<fullName>Mister X</fullName>
+	<id>test</id>
+	<property>
+		<insensitiveSearch>false</insensitiveSearch>
+		<auto>false</auto>
+	</property>
+	<address>
+		<email>luy@jumei.com</email>
+	</address>
+</user>
