@@ -2,9 +2,14 @@ package jm.jenkins.service;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.management.JMException;
 
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
+import org.dom4j.Document;
 
 import jm.bean.User;
 import jm.jenkins.client.JenkinsRequest;
@@ -31,37 +36,39 @@ public class JenkinsServiceImpl implements JenkinsService{
         if(i/100!=2)
             throw new IOException();
     }
-		
+	
+    
 
 	@Override
-	public void shutdown() {
+	public void shutdownVm() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void restart() {
+	public void restartVm() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void reload() {
+	public void login(String userName) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void login() {
+	public void addJob(String jobName) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void addJob() {
+	public void shutdownVM() {
 		// TODO Auto-generated method stub
 		
 	}
+    
 
 	@Override
 	public void delJob() {
@@ -89,13 +96,17 @@ public class JenkinsServiceImpl implements JenkinsService{
 	
 	@Override
 	public User retrieveUser(String userName) {
-		String path = "/securityRealm/user/to2m/api/xml";
-		
-		JenkinsResponse response = request.doGet(path);
-		xmlUtil xml = new xmlUtil(new File(response.getContents().toString()));
-		xml.getDocument();
-		System.out.println(xml.getSingleElementValue("id"));
-		return null;
+		User user = null;
+		try {
+			URL  url = new URL("http","localhost",8081,String.format("/securityRealm/user/%s/api/xml",userName));
+			Document doc = xmlUtil.xmlSource(url);
+			String uname = xmlUtil.getSingleElementValue(xmlUtil.getRootElement(doc),"id");
+			String email = xmlUtil.getSingleElementValue(xmlUtil.getRootElement(doc),"email");
+			user = new User(uname, email);
+		} catch (MalformedURLException e) {
+			new JMException("not got the user correcetly......"+e.getMessage());
+		}
+		return user;
 	}
 
 	@Override
@@ -112,14 +123,21 @@ public class JenkinsServiceImpl implements JenkinsService{
 			
 			System.out.println("fail to regist");
 		}
-		return  null;
+		return  new User(userName, email);
 	}
 	
 	public static void main(String[] args) {
 		JenkinsServiceImpl serviceImpl = new JenkinsServiceImpl();
 		//serviceImpl.register("to2m", "na22me2e13", "name12teest2w", "l2is2d2ea21@jumei.com");
-		User retrieveUser = serviceImpl.retrieveUser("tomdddd");
+		//User retrieveUser = serviceImpl.retrieveUser("tomdddd");
 	}
+
+	@Override
+	public void addJob() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 }

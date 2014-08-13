@@ -8,6 +8,10 @@ public class User {
 	private String  email;
 	
 	
+	public User(String uname,String email) {
+		this.uname = uname;
+		this.email = email;
+	}
 	
 	public String getFulname() {
 		return fulname;

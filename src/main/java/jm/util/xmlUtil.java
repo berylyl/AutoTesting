@@ -4,6 +4,7 @@ import org.apache.commons.collections.map.HashedMap;
 import org.apache.xerces.util.StAXInputSource;
 import org.dom4j.io.SAXReader;
 import org.dom4j.*;
+import org.json.XML;
 
 import java.io.File;
 import java.io.InputStream;
@@ -12,45 +13,47 @@ import java.net.URI;
 import java.net.URL;
 import java.util.List;
 
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
-
 public class xmlUtil {
 
-	private File inputXml;
+	static Document document = null;
 
-	Document document = null;
+	public xmlUtil(URL url) {
 
-	public xmlUtil(File inputXml) {
-		this.inputXml = inputXml;
 	}
-
-	public Document getDocument() {
-		SAXReader saxReader = new SAXReader();
+	
+	public static Document xmlSource(Object input) {
 		try {
-			document = saxReader.read(inputXml);
+			SAXReader saxReader = new SAXReader();
+			if (input instanceof URL){
+				document = saxReader.read((URL)input);
+			}else if(input instanceof File){
+				document = saxReader.read((File)input);
+			}
 		} catch (DocumentException e) {
-			e.printStackTrace();
+			throw new JMException("get Source err..."+e.getMessage());
 		}
-		System.out.println(document);
 		return document;
 	}
 
-	public Element getRootElement() {
+	public static Element getRootElement(Document document) {
 		return document.getRootElement();
 	}
 
-	public String getSingleElementValue(String... path) {
-		Element e = getRootElement();
+	public static String getSingleElementValue(Element e,String... path) {
+		String fullPath = "";
 		for (String s : path) {
+			System.out.println(s);
+			fullPath = fullPath.concat("/").concat(s);
 			e = e.element(s);
+		}
+		
+		if (e == null){
+			throw new JMException("Document does not contain element on path: " + fullPath);
 		}
 		return e.getText();
 	}
 
-	public HashedMap getAllElementValue(String... path) {
-		Element e = getRootElement();
+	public static HashedMap getAllElementValue(Element e,String... path) {
 		for (String s : path) {
 			e = e.element(s);
 		}
@@ -64,28 +67,26 @@ public class xmlUtil {
 	}
 
 	public static void main(String[] args) {
-		/*
-		xmlUtil xml = new xmlUtil(new File("/Users/yinlu/Documents/workspace/pixie.client/src/test/resources/jm.util/misterx.xml"));
-		xml.getDocument();
-		String e = xml.getSingleElementValue("address","email");
+		//file
+		File file = new File("/Users/yinlu/Documents/workspace/pixie.client/src/test/resources/jm.util/misterx.xml");
+		Document doc0 = xmlUtil.xmlSource(file);
+		String e =xmlUtil.getSingleElementValue(xmlUtil.getRootElement(doc0),"address","email");
 		System.out.println(e);
-		
-		HashedMap alle = xml.getAllElementValue("property");
+		HashedMap alle = xmlUtil.getAllElementValue(xmlUtil.getRootElement(doc0),"property");
 		System.out.println(alle.get("auto"));
-		*/
-		SAXReader reader = new SAXReader();
-		URL url;
+
+		//url
 		try {
-			url = new URL("http","192.168.11.65:8081","/user/berylyl/api/xml");
-			Document doc = reader.read(url);	
-			System.out.println(doc.getRootElement().getText());
-		} catch (MalformedURLException e) {
+			URL url = new URL("http","localhost",8081,"/user/berylyl/api/xml");
+			Document doc = xmlUtil.xmlSource(url);
+			String singleElementValue = xmlUtil.getSingleElementValue(xmlUtil.getRootElement(doc),"id");
+			System.out.println(singleElementValue);
+		} catch (MalformedURLException ex) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			ex.printStackTrace();
+			System.out.println(ex);
+		} 
+		
 	
 	}
 }

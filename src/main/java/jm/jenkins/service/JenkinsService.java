@@ -8,9 +8,8 @@ public interface JenkinsService {
 	
 	
 	//service
-	public void shutdown();
-	public void restart();
-	public void reload();
+	public void shutdownVm();
+	public void restartVm();
 	
 	//user
     /**
@@ -23,7 +22,7 @@ public interface JenkinsService {
      */
     User retrieveUser(String userName);
 	User register(String userName, String password, String fullName, String email);
-	public void login();
+	public void login(String userName);
 	
 	//job
 	public void addJob();
@@ -33,5 +32,7 @@ public interface JenkinsService {
 	//exec
 	public void build();
 	public void getLog();
+	void shutdownVM();
+	void addJob(String name);
 	
 }
