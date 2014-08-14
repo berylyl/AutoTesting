@@ -4,20 +4,23 @@ public class User {
 	private Integer uid;
 	private String  uname;
 	private String  passwd;
-	private String  fulname;
+	private String  fullname;
 	private String  email;
 	
 	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
 	public User(String uname,String email) {
 		this.uname = uname;
 		this.email = email;
 	}
 	
-	public String getFulname() {
-		return fulname;
+	public String getFullname() {
+		return fullname;
 	}
-	public void setFulname(String fulname) {
-		this.fulname = fulname;
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
 	}
 	public String getEmail() {
 		return email;

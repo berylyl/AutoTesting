@@ -32,4 +32,8 @@
 		<property name="mapperInterface" value="dao.UserDao"></property>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
 	</bean>
+	
+	<bean id="User" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="jm.bean.User"></property>
+	</bean>
 </beans>

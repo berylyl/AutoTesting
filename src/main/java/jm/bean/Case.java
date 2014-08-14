@@ -2,6 +2,8 @@ package jm.bean;
 
 import java.util.ArrayList;
 
+
+
 public class Case {
 	private Integer id;
 	private String name;
