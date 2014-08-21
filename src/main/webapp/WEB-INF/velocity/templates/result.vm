@@ -7,6 +7,6 @@
 		<h4>#springMessage("operation_error")</h4>
 		<p>$resultDesc</p>
 	#end
-
+	
 	<p/>
 #end

@@ -1,5 +1,5 @@
 #define($content)
-	<form action="/saveCase" method="post">
+	<form action="${rc.contextPath}/saveCase" method="post">
 		<table border="3">
 	    
 	    <div>

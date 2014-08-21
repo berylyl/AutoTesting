@@ -7,7 +7,13 @@ public class CaseVM
 	private String caseId;
 	private String caseName;
 	private String caseDesc;
+	private String caseNote;
 	private List<StepVM> steps;
+	
+	public CaseVM() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public String getCaseId() {
 		return caseId;
 	}
@@ -27,6 +33,12 @@ public class CaseVM
 		this.caseDesc = caseDesc;
 	}
 	
+	public String getCaseNote() {
+		return caseNote;
+	}
+	public void setCaseNote(String caseNote) {
+		this.caseNote = caseNote;
+	}
 	public List<StepVM> getSteps()
 	{
 		return steps;
