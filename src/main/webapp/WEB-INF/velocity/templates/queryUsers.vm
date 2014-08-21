@@ -1,0 +1,37 @@
+#define($content)
+	<div class="row">
+		<form action="/queryUsers" method="post">
+			<div class="ten columns">
+				<label class="two columns">UserName:</label>
+				<input class="five columns" type="text" size="20" name="userName"/>
+				<input class="two columns" type="submit" value='#springMessage("submit")'/>
+			</div>
+		</form>
+	</div>
+
+	<table border="1" align="center" width="100%">
+		<caption>#springMessage("tableTitle")</caption>
+		<tr>
+		  <th>#springMessage("userId")</th>
+		  <th>#springMessage("userName")</th>
+		  <th>#springMessage("age")</th>
+		  <th>#springMessage("married")</th>
+		</tr>
+		#foreach($user in $userVMs)
+      		<tr>
+        		<td>
+          			$user.getUserId()
+				</td> 
+        		<td>
+          			$user.getUserName()
+				</td> 
+        		<td>
+          			$user.getAge()
+				</td> 
+        		<td>
+          			$user.isMarried()
+				</td> 
+			</tr>
+		#end
+	</table>
+#end

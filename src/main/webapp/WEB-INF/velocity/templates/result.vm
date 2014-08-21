@@ -1,0 +1,12 @@
+#define($content)
+	#if($resultCode == 0)
+		<h4>#springMessage("operation_ok")</h4>
+	#end
+	
+	#if($resultCode != 0)
+		<h4>#springMessage("operation_error")</h4>
+		<p>$resultDesc</p>
+	#end
+
+	<p/>
+#end

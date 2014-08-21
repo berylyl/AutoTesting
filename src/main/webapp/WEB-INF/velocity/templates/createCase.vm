@@ -1,0 +1,24 @@
+#define($content)
+	<form action="/saveCase" method="post">
+		<table border="3">
+	    
+	    <div>
+	        <strong>#springMessage("caseName"):</strong><input type="text" size="20" name="caseName" value="$!{caseVM.caseName}">
+	    </div>
+	    
+	    
+	    <div>
+	        <strong>#springMessage("caseDesc"):</strong><input type="text" size="20" name="caseDesc" value="$!{caseVM.caseDesc}">
+	    </div>
+			    
+	    <div>
+	        <strong>#springMessage("caseNote"):</strong><input type="text" size="20" name="caseNote" value="$!{caseVM.caseNote}">
+	    </div>
+		
+	    <div>
+	        <input type="submit" value='#springMessage("submit")'>
+	        <input type="reset" value='#springMessage("cancel")'>
+	    </div>
+		</table>
+	</form>
+#end

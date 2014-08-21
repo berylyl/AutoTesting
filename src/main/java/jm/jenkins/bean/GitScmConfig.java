@@ -1,6 +1,5 @@
 package jm.jenkins.bean;
 
-import org.dom4j.Document;
 import org.dom4j.Element;
 
 public class GitScmConfig extends ScmConfig {

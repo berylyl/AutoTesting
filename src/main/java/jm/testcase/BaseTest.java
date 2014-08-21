@@ -3,7 +3,6 @@ package jm.testcase;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.springframework.test.context.transaction.TransactionConfiguration;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 @ContextConfiguration(locations={"classpath:main/resources/applicationContext.xml"})
