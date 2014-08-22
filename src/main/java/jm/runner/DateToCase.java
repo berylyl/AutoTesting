@@ -7,7 +7,7 @@ import org.dom4j.Document;
 import org.dom4j.Element;
 
 import jm.util.StringUtils;
-import jm.util.xmlUtil;
+import jm.util.XmlUtils;
 
 public class DateToCase {
 	private String importHandler;
@@ -67,21 +67,21 @@ public class DateToCase {
 		
 		String fileName = dateFile.getName();
 		String caseName = fileName.substring(0, fileName.lastIndexOf("."));
-		Document doc = xmlUtil.xmlSource(dateFile);
+		Document doc = XmlUtils.xmlSource(dateFile);
 		Element caseRoot = doc.getRootElement();
 		String caseDesc = caseRoot.attribute("desc").getName();
 		String caseNote = caseRoot.attribute("note").getName();
 
-		ArrayList<Element> steps = xmlUtil.getGroupElements(caseRoot,"steps");
+		ArrayList<Element> steps = XmlUtils.getGroupElements(caseRoot,"steps");
 		int num = 0;
 		String stepName,stepDesc,elementType,elementOpt,elementValue,elementXpath ="";
 		for(Element e: steps){
 			stepName = e.attributeValue("name");
 			stepDesc = e.attributeValue("desc");
-			elementType = xmlUtil.getSingleElementValue(e,"type");
-			elementOpt =  xmlUtil.getSingleElementValue(e,"opt");
-			elementValue = xmlUtil.getSingleElementValue(e,"value");;
-			elementXpath = xmlUtil.getSingleElementValue(e,"selector","xpath");
+			elementType = XmlUtils.getSingleElementValue(e,"type");
+			elementOpt =  XmlUtils.getSingleElementValue(e,"opt");
+			elementValue = XmlUtils.getSingleElementValue(e,"value");;
+			elementXpath = XmlUtils.getSingleElementValue(e,"selector","xpath");
 			StepBean stepBean = new StepBean(num++,stepName,stepDesc,elementType,elementOpt,elementValue,elementXpath);
 			if (stepBean != null){
 				this.setTestHandler(stepBean);

@@ -8,7 +8,7 @@ import jm.util.GlobalParameter;
 
 public class ProjectVM {
 	private String ProjectName;
-	private ArrayList<ProjectSuiteVM> projectSuite;
+	private ArrayList<SuiteVM> projectSuite;
 	
 	public ProjectVM() {
 		File dir = new File(GlobalParameter.testDataPath);
@@ -29,11 +29,11 @@ public class ProjectVM {
 		ProjectName = projectName;
 	}
 
-	public ArrayList<ProjectSuiteVM> getProjectSuite() {
+	public ArrayList<SuiteVM> getSuite() {
 		return projectSuite;
 	}
 
-	public void setProjectSuite(ArrayList<ProjectSuiteVM> projectSuite) {
+	public void setSuite(ArrayList<SuiteVM> projectSuite) {
 		this.projectSuite = projectSuite;
 	}
 

@@ -2,8 +2,9 @@ package jm.bean;
 
 import java.util.ArrayList;
 
-public class Suite {
+public class SuiteVM {
 	private Integer id;
+	private String name;
 	private ArrayList<String> cases = new ArrayList<String>();
 	
 	public Integer getId() {
@@ -17,6 +18,12 @@ public class Suite {
 	}
 	public void setCases(String cs) {
 		cases.add(cs);
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

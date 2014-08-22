@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<case  desc="" note="">
+	<steps>
+		<step name="" desc="">
+		    <type></type>
+		    <opt></opt>
+			<value></value>
+			<selector>
+				<xpath></xpath>
+			</selector>
+		</step>
+	</steps>
+</case>

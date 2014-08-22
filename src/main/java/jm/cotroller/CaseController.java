@@ -3,7 +3,11 @@ package jm.cotroller;
 import java.util.List;
 
 import jm.bean.CaseVM;
+import jm.service.CaseService;
+import jm.service.CaseServiceImpl;
+import jm.util.XmlUtils;
 
+import org.dom4j.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class LoginController{
+public class CaseController{
 
     @Autowired
     //private UserService userService;
@@ -33,10 +37,15 @@ public class LoginController{
     
     @RequestMapping("/saveCase")
 	public ModelAndView saveCase(CaseVM caseVM) {
+    	CaseService caseService = new CaseServiceImpl();
+    	String caseName = caseVM.getCaseName();
     	ModelAndView mv = new ModelAndView("queryCase");
-    	
-    	System.out.println(caseVM.getCaseName());
-    	mv.addObject("resultDesc",caseVM.getCaseName());
+    	if(caseName!=null && caseName.length() >0){
+    		caseService.createCase(caseVM);
+    		mv.addObject("0",caseVM.getCaseName());
+    	}else{
+    		mv.addObject("1",caseVM.getCaseName());
+    	}
     	return mv;
 	}
     

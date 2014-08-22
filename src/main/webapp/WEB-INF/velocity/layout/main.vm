@@ -50,19 +50,25 @@
 		</div>
 		
 		<div class="sixteen columns">
-				<div class="six columns" align="left">
+
+				<div class="five columns">
 					<ul>
+						<!--
 						<li><a href=${rc.contextPath}/index.html><h4>Home</h4></a></li>
 						<li><a href=${rc.contextPath}/createCase><h4>Create Case</h4></a></li>
-						<li><a href=${rc.contextPath}/queryCase><h4>Query Case</h4></a></li>
-						<li><a href=${rc.contextPath}/queryCase><h4>Query Case</h4></a></li>
-						<li><a href=${rc.contextPath}/queryCase><h4>Query Case</h4></a></li>
-						<li><a href=${rc.contextPath}/queryCase><h4>Query Case</h4></a></li>
-						<li><a href=${rc.contextPath}/queryCase><h4>Query Case</h4></a></li>
+						<li><a href=${rc.contextPath}/queryCase?><h4>Query Case</h4></a></li>
+						<li><a href=${rc.contextPath}/queryCase><h4>Create Plan</h4></a></li>
+						<li><a href=${rc.contextPath}/queryCase?><h4>Query Plan</h4></a></li>
+						<li><a href=${rc.contextPath}/queryCase?><h4>Query Plan</h4></a></li>
+						-->
+						#set( $projectVMs = ["name", "address"] )
+								#foreach($pro in $projectVMs)
+									<li><a href=${rc.contextPath}<h4>pro.getProjectName</h4></a></li>
+								#end
 					</ul>
 				</div>
-				
-				<div class="offset-by-six"  align="center">
+
+				<div class="offset-by-five" align="right">
 					$!{content}
 				</div>	
 

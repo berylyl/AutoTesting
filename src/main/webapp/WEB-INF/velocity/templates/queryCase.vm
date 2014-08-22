@@ -2,7 +2,7 @@
 		
 	<div class="row">
 		<form action="/queryUsers" method="get">
-			<div class="ten columns">
+			<div class="one columns">
 				<label class="two columns">UserName:</label>
 				<input class="five columns" type="text" size="20" name="userName"/>
 				<input class="two columns" type="submit" value='#springMessage("check")'/>
@@ -11,11 +11,8 @@
 	</div>
 
 	<div>
-		<table border="1" align="left" width="100%">
+		<table border="1" align="right" width="80%">
 		<tr>
-			<td>
-	        <strong>#springMessage("caseId")</strong>
-			</td>
 			<td>
 	        <strong>#springMessage("caseName")</strong>
 			</td>
@@ -28,9 +25,6 @@
 		</tr>
 			#foreach($user in $userVMs)
       		<tr>
-        		<td>
-          			$user.getUserId()
-				</td> 
         		<td>
           			$user.getUserName()
 				</td> 

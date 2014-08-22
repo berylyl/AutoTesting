@@ -14,7 +14,7 @@ import org.dom4j.Document;
 import jm.bean.User;
 import jm.jenkins.client.JenkinsRequest;
 import jm.jenkins.client.JenkinsResponse;
-import jm.util.xmlUtil;
+import jm.util.XmlUtils;
 
 public class JenkinsServiceImpl implements JenkinsService{
 	/*--httpPort=$HTTP_PORT，用来设置jenkins运行时的web端口。
@@ -99,9 +99,9 @@ public class JenkinsServiceImpl implements JenkinsService{
 		User user = null;
 		try {
 			URL  url = new URL("http","localhost",8081,String.format("/securityRealm/user/%s/api/xml",userName));
-			Document doc = xmlUtil.xmlSource(url);
-			String uname = xmlUtil.getSingleElementValue(xmlUtil.getRootElement(doc),"id");
-			String email = xmlUtil.getSingleElementValue(xmlUtil.getRootElement(doc),"email");
+			Document doc = XmlUtils.xmlSource(url);
+			String uname = XmlUtils.getSingleElementValue(XmlUtils.getRootElement(doc),"id");
+			String email = XmlUtils.getSingleElementValue(XmlUtils.getRootElement(doc),"email");
 			user = new User(uname, email);
 		} catch (MalformedURLException e) {
 			new JMException("not got the user correcetly......"+e.getMessage());
