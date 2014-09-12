@@ -1,38 +1,43 @@
 package jm.cotroller;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import jm.bean.CaseVM;
+import jm.bean.ProjectVM;
+import jm.bean.SuiteVM;
 import jm.service.CaseService;
 import jm.service.CaseServiceImpl;
-import jm.util.XmlUtils;
+import jm.service.ProjectServiceImpl;
+import jm.service.SuiteServiceImpl;
 
-import org.dom4j.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 
-@Controller
+//@Controller
 public class CaseController{
 
     @Autowired
-    //private UserService userService;
-
-    @RequestMapping("/")
-	public String welcomeRedirect() {
-		return "index";
-	}
-    @RequestMapping("/index")
-	public String indexRedirect() {
-		return "index";
-	}
+    private CaseServiceImpl  caseServiceImpl;
+    
     
     @RequestMapping("/createCase")
 	public String createCase() {
 		return "createCase";
 	}
+    
+    
+    
+    @RequestMapping(value="/query")
+    public ModelAndView querySuiteByProjectName(@RequestParam("suite")  String suiteName) {
+        ModelAndView mv = new ModelAndView("queryCase");
+        ArrayList<CaseVM> caseAll = caseServiceImpl.queryCaseBySuiteName(suiteName);
+        mv.addObject("caseList",caseAll );
+        return mv;
+    }
     
     
     @RequestMapping("/saveCase")
@@ -57,23 +62,14 @@ public class CaseController{
     	return mv;
     }
     /*
-    @RequestMapping(value = "login", method = RequestMethod.POST)
-    public String login(@ModelAttribute("user") User user, HttpServletRequest request) {
-        String userId = request.getParameter("userId").toString();
-        String passwd = request.getParameter("passwd").toString();
-        user.setUserId(userId);
-        user.setPasswd(passwd);
-        int loginStatus = userService.validLogin(userId, passwd);
-		switch (loginStatus) {
-		case LOGIN_SUCCESS:
-			return "/index";
-		case LOGIN_UNEXIST_USER:
-			return "redirect:/";
-		case LOGIN_WRONG_PASSWORD:
-			return "redirect:/";
-		default:
-			return "redirect:/";
-		}
-		
+    @RequestMapping("/queryCaseAll")
+	public ModelAndView queryCaseAll() {
+    	ArrayList<ProjectVM> projectAll = caseServiceImpl.queryProjectAll();
+    	System.out.println(caseServiceImpl);
+    	ModelAndView mv = new ModelAndView("menu");
+    	mv.addObject("projectVMs", projectAll);
+    	return mv;
     }*/
+
+   
 }

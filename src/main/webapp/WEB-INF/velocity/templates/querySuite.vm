@@ -1,0 +1,40 @@
+#define($content)
+		
+	<!--
+	<div class="row">
+		<form action="/queryUsers" method="get">
+			<div class="one columns">
+				<label class="two columns">UserName:</label>
+				<input class="five columns" type="text" size="20" name="userName"/>
+				<input class="two columns" type="submit" value='#springMessage("check")'/>
+			</div>
+		</form>
+	</div>
+   -->
+	<table>
+		<table border="1" align="right" width="80%">
+			<caption>#springMessage("suitetableTitle")</caption>
+			<tr>
+				<th>#springMessage("suiteName")</th>
+				<th>#springMessage("createTime")</th>
+				<th>#springMessage("createPerson")</th>
+				<th>#springMessage("note")</th>
+			</tr>
+      		#foreach($suite in $suiteList)
+      		<tr>
+        		<td>
+          			$suite.getSuiteName()
+				</td> 
+        		<td>
+          			$suite.getCreateTime()
+				</td> 
+        		<td>
+          			$suite.getCreatePerson()
+				</td> 
+        		<td>
+          			$suite.note()
+				</td> 
+			</tr>
+		#end
+</table>
+#end

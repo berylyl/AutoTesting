@@ -1,5 +1,7 @@
 package jm.service;
 
+import java.util.ArrayList;
+
 import org.junit.runners.Suite;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -34,12 +36,6 @@ public class CaseServiceImpl implements CaseService {
 	}
 
 	@Override
-	public void queryCaseBySuite(Suite suite) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void queryCaseByName(String name) {
 		// TODO Auto-generated method stub
 		
@@ -53,9 +49,16 @@ public class CaseServiceImpl implements CaseService {
 
 	@Override
 	public void queryCaseBySuite(SuiteVM suite) {
-		String name = suite.getName();
+		String name = suite.getSuiteName();
 		
 	}
+
+    @Override
+    public ArrayList<CaseVM> queryCaseBySuiteName(String name) {
+        return null;
+        // TODO Auto-generated method stub
+        
+    }
 
 
 }

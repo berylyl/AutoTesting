@@ -1,24 +1,18 @@
 package jm.bean;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import jm.util.GlobalParameter;
+import org.springframework.stereotype.Component;
 
+@Component 
 public class ProjectVM {
 	private String ProjectName;
 	private ArrayList<SuiteVM> projectSuite;
 	
+	
 	public ProjectVM() {
-		File dir = new File(GlobalParameter.testDataPath);
-		File[] files = dir.listFiles();
-		for(File f: files){
-			if(f.isDirectory()){
-				this.setProjectName(f.getName());
-				
-			}
-		}
+
 	}
 	
 	public String getProjectName() {

@@ -1,0 +1,17 @@
+#define($menuTree)
+	<div>
+		#foreach($pro in ${menuList.keySet()})  
+      		<tr>
+        		<td>
+					#set( $proName = $pro.getProjectName())
+					<li><a href="${rc.contextPath}/suite/query?project=${proName}"><h4>projectName=$proName</h4></a></li>
+				</td>
+					#foreach($suite in $menuList.get($pro))
+						#set( $suiteName = $suite.getSuiteName())
+						<td> <a href="${rc.contextPath}/Case?suiteName=$suiteName"><h5>$suiteName</h5></a></td>
+					#end
+			</tr>
+			
+		#end
+	</div>
+#end

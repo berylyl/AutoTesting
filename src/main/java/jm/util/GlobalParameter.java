@@ -1,5 +1,7 @@
 package jm.util;
 
+import java.io.File;
+
 /**
  * 全局常量配置<br>
  * 采用相对路径。即工程所在的同级目录。这样做是为了将来编译成程序时，各种路径管理的方便.<br>
@@ -11,7 +13,8 @@ package jm.util;
 public class GlobalParameter {
 	public static final String fileSeparator = System.getProperty("file.separator");
 	
-	private static String CommonPath = System.getProperty("user.dir");
+	//private static String CommonPath = System.getProperty("user.dir");
+	private static String CommonPath = "/Users/yinlu/Documents/workspace/AutoTesting";
 	public static String srcJavaPath = CommonPath+fileSeparator+"src/main/java";
 	public static String srcResourcesPath = CommonPath+fileSeparator+"src/main/resources";
 	public static String srcWebPath = CommonPath+fileSeparator+"webapp";
@@ -41,6 +44,11 @@ public class GlobalParameter {
 	public static String pluginGitClass = "hudson.plugins.git.GitSCM";
 	public static String jenkinsConfigFile  = "config.xml";
 	public static String jenkinsCredentFile  = "credentials.xml";
+	
+	public static void main(String[] args) {
+		System.out.println("/Users/yinlu/Documents/workspace/AutoTesting/src/main/resources/testdate/");
+		System.out.println(testDataPath);
+	}
 	
 
 }

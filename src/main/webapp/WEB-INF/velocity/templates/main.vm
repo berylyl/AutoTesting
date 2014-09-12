@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE> test main</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="/resources/css/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="/resources/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="/resources/js/jquery.ztree.core-3.5.js"></script>
+	<SCRIPT type="text/javascript">
+		<!--
+		var curMenu = null, zTree_Menu = null;
+		var demoIframe;
+		var setting = {
+			view: {
+				showLine: true,
+				selectedMulti: false,
+				dblClickExpand: false,
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				onNodeCreated: this.onNodeCreated,
+				beforeClick: this.beforeClick,
+				onClick: this.onClick
+
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"CaseEdit", open:true},
+			{ id:11, pId:1, name:"SubMenu 1-1"},
+			{ id:111, pId:11, name:"treenodeAB 1-1-1",file:"http://www.baidu.com"},
+			{ id:112, pId:11, name:"treenodeAB 1-1-2",file:"createCase"},
+			{ id:113, pId:11, name:"treenodeAB 1-1-3",file:"queryCase?id=12"},
+			{ id:114, pId:11, name:"treenodeAB 1-1-4",file:"core/standardData4"},
+			{ id:12, pId:1, name:"SubMenu 1-2"},
+			{ id:121, pId:12, name:"treenodeAB 1-2-1",file:"core/standardData"},
+			{ id:122, pId:12, name:"treenodeAB 1-2-2",file:"core/standardData"},
+			{ id:123, pId:12, name:"treenodeAB 1-2-3",file:"core/standardData"},
+			{ id:124, pId:12, name:"treenodeAB 1-2-4",file:"core/standardData"},
+			{ id:2, pId:0, name:"ObjectOA"},
+			{ id:21, pId:2, name:"SubMenu 2-1"},
+			{ id:211, pId:21, name:"treenodeAB 2-1-1"},
+			{ id:212, pId:21, name:"treenodeAB 2-1-2"},
+			{ id:213, pId:21, name:"treenodeAB 2-1-3"},
+			{ id:214, pId:21, name:"treenodeAB 2-1-4"},
+			{ id:22, pId:2, name:"SubMenu 2-2"},
+			{ id:221, pId:22, name:"treenodeAB 2-2-1"},
+			{ id:222, pId:22, name:"treenodeAB 2-2-2"},
+			{ id:223, pId:22, name:"treenodeAB 2-2-3"},
+			{ id:224, pId:22, name:"treenodeAB 2-2-4"},
+			{ id:3, pId:0, name:"ParamVarOA"},
+			{ id:31, pId:3, name:"SubMenu 3-1"},
+			{ id:311, pId:31, name:"treenodeAB 3-1-1"},
+			{ id:312, pId:31, name:"treenodeAB 3-1-2"},
+			{ id:313, pId:31, name:"treenodeAB 3-1-3"},
+			{ id:314, pId:31, name:"treenodeAB 3-1-4"},
+			{ id:32, pId:3, name:"SubMenu 3-2"},
+			{ id:321, pId:32, name:"treenodeAB 3-2-1"},
+			{ id:322, pId:32, name:"treenodeAB 3-2-2"},
+			{ id:323, pId:32, name:"treenodeAB 3-2-3"},
+			{ id:324, pId:32, name:"treenodeAB 3-2-4"}
+		];
+
+		function beforeClick(treeId, node) {
+			if (node.isParent) {
+				if (node.level === 0) {
+					var pNode = curMenu;
+					while (pNode && pNode.level !==0) {
+						pNode = pNode.getParentNode();
+					}
+					if (pNode !== node) {
+						var a = $("#" + pNode.tId + "_a");
+						a.removeClass("cur");
+						zTree_Menu.expandNode(pNode, false);
+					}
+					a = $("#" + node.tId + "_a");
+					a.addClass("cur");
+
+					var isOpen = false;
+					for (var i=0,l=node.children.length; i<l; i++) {
+						if(node.children[i].open) {
+							isOpen = true;
+							break;
+						}
+					}
+					if (isOpen) {
+						zTree_Menu.expandNode(node, true);
+						curMenu = node;
+					} else {
+						zTree_Menu.expandNode(node.children[0].isParent?node.children[0]:node, true);
+						curMenu = node.children[0];
+					}
+				} else {
+					zTree_Menu.expandNode(node);
+				}
+					return false;
+			}else {
+					demoIframe.attr("src",node.file);
+					//demoIframe.attr("src",node.file + ".html");
+					return true;
+			}
+			//return !node.isParent;
+		}
+
+		$(document).ready(function(){
+			jQuery.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			zTree_Menu = jQuery.fn.zTree.getZTreeObj("treeDemo");
+			curMenu = zTree_Menu.getNodes()[0].children[0].children[0];
+			zTree_Menu.selectNode(curMenu);
+			var a = $("#" + zTree_Menu.getNodes()[0].tId + "_a");
+			a.addClass("cur");
+
+			demoIframe = $("#testIframe");
+			demoIframe.bind("load", loadReady);
+			//zTree.selectNode(zTree.getNodeByParam("id", 11));
+
+
+		});
+
+		function loadReady() {
+			var bodyH = demoIframe.contents().find("body").get(0).scrollHeight,
+			htmlH = demoIframe.contents().find("html").get(0).scrollHeight,
+			maxH = Math.max(bodyH, htmlH), minH = Math.min(bodyH, htmlH),
+			h = demoIframe.height() >= maxH ? minH:maxH ;
+			if (h < 530) h = 530;
+			demoIframe.height(h);
+		}
+
+		//-->
+	</SCRIPT>
+	<style type="text/css">
+.ztree li a.level0 {width:200px;height: 20px; text-align: center; display:block; background-color: #0B61A4; border:1px silver solid;}
+.ztree li a.level0.cur {background-color: #66A3D2; }
+.ztree li a.level0 span {display: block; color: white; padding-top:3px; font-size:12px; font-weight: bold;word-spacing: 2px;}
+.ztree li a.level0 span.button {float:right; margin-left: 10px; visibility: visible;display:none;}
+.ztree li span.button.switch.level0 {display:none;}
+	</style>
+ </HEAD>
+
+<BODY>
+<h1>Semeller</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li class="title"><h2>JumeiShopping → folder1 → folder2 → Case1</h2></li>
+
+<div class="content_wrap">
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree" ></ul>
+	</div>
+			$!{content}
+	<div class="right">
+		<ul class="info">
+
+			<IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=1000px  height=600px>
+            </IFRAME>
+		</ul>
+	</div>
+</div>
+
+</BODY>
+</HTML>

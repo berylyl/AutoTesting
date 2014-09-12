@@ -1,5 +1,7 @@
 package jm.service;
 
+import java.util.ArrayList;
+
 import javax.xml.ws.ServiceMode;
 
 import org.junit.runners.Suite;
@@ -13,9 +15,9 @@ public interface CaseService {
 	void createCase(CaseVM caseVM);
 	void updateCase();
 	void queryCaseAll();
-	void queryCaseBySuite(Suite suite);
 	void queryCaseByName(String name);
 	void deleteCaseByName(String name);
 	void queryCaseBySuite(SuiteVM suite);
+	ArrayList<CaseVM>  queryCaseBySuiteName(String name);
 
 }
