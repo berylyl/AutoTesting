@@ -135,9 +135,11 @@ public class XmlUtils {
     // update xml value
 
     public static void main(String[] args) throws Exception {
-        SAXReader saxReader = new SAXReader();
-        Document read = saxReader.read("/Users/yinlu/Documents/workspace/smeller/smeller-web/src/main/resources/TestProject/JumeiShopping/caseDate/loginCase.xml");
-        Element root = read.getRootElement();
+        
+        
+
+        /*
+        System.out.println(root.attributeValue("desc"));
         HashedMap allElementValue = XmlUtils.getAllElementValue(root, "steps","stepa");
         String selecorPath = "";
         for(Object o:allElementValue.keySet()){
