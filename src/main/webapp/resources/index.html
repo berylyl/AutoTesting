@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap 实例 - 响应式的导航栏</title>
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="navbar navbar-default">
+		<p>xxx System</p>
+	</div>
+
+	<ol class="breadcrumb">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">2013</a></li>
+		<li class="active">十一月</li>
+	</ol>
+
+	<hr>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4" id="sidebar">
+				<div class="panel panel-default">
+					<div class="panel-heading">面板标题</div>
+
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="#collapseOne"> 第 1 部分 </a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in">
+								<div class="panel-body">Ad vegan excepteur butcher vice
+									lomo.</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="#collapseTwo"> 第 2 部分 </a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse">
+								<div class="panel-body">Nihil anim keffiyeh helvetica</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion"
+										href="#collapseThree"> 第 3 部分 </a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="panel-collapse collapse">
+								<div class="panel-body">Ad vegan excepteur butcher vice
+									lomo.</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+		</div>
+
+		<div class="col-md-8" id="sidebar">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">面板标题</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table">
+						<th>产品</th>
+						<th>价格</th>
+						<tr>
+							<td>产品 A</td>
+							<td>200</td>
+						</tr>
+						<tr>
+							<td>产品 B</td>
+							<td>400</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<ul class="pagination pagination-sm">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+
+
+
+	<hr>
+
+	<div class="footer">
+		<div class="container">
+			<p class="text-muted">Place sticky footer content here.</p>
+		</div>
+	</div>
+</body>

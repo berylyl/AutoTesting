@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RepObjects>
+	<Object id="" class="loginBord" Name="" xpath="/html/body/div[3]/div/div/div" Text="聚美优品">
+		<ChildObjects>
+			<Object id="" class="" Name="" xpath="/html/body/div[3]/div/div/div/div[1]/h1" Text="登录聚美"/>
+			<Object id="" class="" Name="email" xpath="//*[@id=&quot;login-user-form&quot;]/div[1]/input" Text="用户名" />
+			<Object id="" class="" Name="password" xpath="//*[@id=&quot;login-user-form&quot;]/div[1]/input" Text="密码" />
+			<Object id="" class="loginbtn" Name="" xpath="//*[@id=&quot;login-user-form&quot;]/input[2]" Text="登录" />
+		</ChildObjects>
+	</Object>
+</RepObjects>
