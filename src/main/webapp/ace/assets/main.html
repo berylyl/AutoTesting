@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>控制台 - Bootstrap后台管理系统模版Ace下载</title>
+<!-- basic styles -->
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+<!-- ace styles -->
+
+<link rel="stylesheet" href="css/ace.min.css" />
+<link rel="stylesheet" href="css/ace-rtl.min.css" />
+<link rel="stylesheet" href="css/ace-skins.min.css" />
+
+<!-- split js -luy -->
+<script src="js/ace-extra.min.js"></script>
+<!-- ace settings handler -->
+
+</head>
+
+<body>
+	<div class="navbar navbar-default" id="navbar">
+		<script type="text/javascript">
+			try {
+				ace.settings.check('navbar', 'fixed')
+			} catch (e) {
+			}
+		</script>
+
+		<div class="navbar-container" id="navbar-container">
+			<div class="navbar-header pull-left">
+				<a href="#" class="navbar-brand"> <small> <i
+						class="icon-leaf"></i> Smeller。。。。
+				</small>
+				</a>
+				<!-- /.brand -->
+			</div>
+			<!-- /.navbar-header -->
+
+			<div class="navbar-header pull-right" role="navigation">
+				<ul class="nav ace-nav">
+
+
+					<li class="light-blue"><a data-toggle="dropdown" href="#"
+						class="dropdown-toggle"> <img class="nav-user-photo"
+							src="avatars/user.jpg" alt="Jason's Photo" /> <span
+							class="user-info"> <small>欢迎光临,</small> Jason
+						</span> <i class="icon-caret-down"></i>
+					</a>
+
+						<ul
+							class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li><a href="#"> <i class="icon-cog"></i> 设置
+							</a></li>
+
+							<li><a href="#"> <i class="icon-user"></i> 个人资料
+							</a></li>
+
+							<li class="divider"></li>
+
+							<li><a href="#"> <i class="icon-off"></i> 退出
+							</a></li>
+						</ul></li>
+				</ul>
+				<!-- /.ace-nav -->
+			</div>
+			<!-- /.navbar-header -->
+		</div>
+		<!-- /.container -->
+	</div>
+
+	<div class="main-container" id="main-container">
+		<script type="text/javascript">
+			try {
+				ace.settings.check('main-container', 'fixed')
+			} catch (e) {
+			}
+		</script>
+
+		<div class="main-container-inner">
+			<a class="menu-toggler" id="menu-toggler" href="#"> <span
+				class="menu-text"></span>
+			</a>
+
+			<div class="sidebar" id="sidebar">
+				<script type="text/javascript">
+					try {
+						ace.settings.check('sidebar', 'fixed')
+					} catch (e) {
+					}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+						<button class="btn btn-success">
+							<i class="icon-signal"></i>
+						</button>
+
+						<button class="btn btn-info">
+							<i class="icon-pencil"></i>
+						</button>
+
+						<button class="btn btn-warning">
+							<i class="icon-group"></i>
+						</button>
+
+						<button class="btn btn-danger">
+							<i class="icon-cogs"></i>
+						</button>
+					</div>
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span> <span class="btn btn-info"></span>
+
+						<span class="btn btn-warning"></span> <span class="btn btn-danger"></span>
+					</div>
+				</div>
+				<!-- #sidebar-shortcuts -->
+
+				<ul class="nav nav-list">
+					<li><a href="#" class="dropdown-toggle"> <i
+							class="icon-desktop"></i> <span class="menu-text"> 用例编辑 </span> <b
+							class="arrow icon-angle-down"></b>
+					</a>
+						<ul class="submenu">
+							<li><a href="#" class="dropdown-toggle"> <i
+									class="icon-plus"></i> JUMEI-商品网站
+							</a>
+								<ul class="submenu">
+									<li><a href="#" class="dropdown-toggle"> <i
+											class="icon-plus"></i>网站页面测试
+									</a>
+										<ul class="submenu">
+											<li><a href="#" class="dropdown-toggle"> <i
+													class="icon-plus"></i> 登陆测试
+											</a>
+												<ul class="submenu">
+													<li><a href="#" class="dropdown-toggle"> <i
+															class="icon-leaf"></i> Case1....
+													</a>
+													<li><a href="#" class="dropdown-toggle"> <i
+															class="icon-leaf"></i> Case2....
+													</a>
+												</ul></li>
+										</ul></li>
+								</ul></li>
+							<li><a href="#" class="dropdown-toggle"> <i
+									class="icon-plus"></i> JUMEI-运维系统
+							</a></li>
+
+						</ul></li>
+
+
+
+					<li><a href="#" class="dropdown-toggle"> <i
+							class="icon-desktop"></i> <span class="menu-text"> 对象库管理 </span>
+							<b class="arrow icon-angle-down"></b>
+					</a>
+						<ul class="submenu">
+							<li><a href="#"> <i class="icon-leaf"></i> JUMEI-商品网站
+							</a></li>
+							<li><a href="#"> <i class="icon-leaf"></i> JUMEI-运维系统
+							</a></li>
+						</ul></li>
+
+					<li><a href="#" class="dropdown-toggle"> <i
+							class="icon-desktop"></i> <span class="menu-text"> 参数库管理 </span>
+							<b class="arrow icon-angle-down"></b>
+					</a>
+						<ul class="submenu">
+							<li><a href="#"> <i class="icon-leaf"></i> JUMEI-商品网站
+							</a></li>
+							<li><a href="#"> <i class="icon-leaf"></i> JUMEI-运维系统
+							</a></li>
+						</ul></li>
+
+
+				</ul>
+				<!-- /.nav-list -->
+
+				<div class="sidebar-collapse" id="sidebar-collapse">
+					<i class="icon-double-angle-left"
+						data-icon1="icon-double-angle-left"
+						data-icon2="icon-double-angle-right"></i>
+				</div>
+
+				<script type="text/javascript">
+					try {
+						ace.settings.check('sidebar', 'collapsed')
+					} catch (e) {
+					}
+				</script>
+			</div>
+
+			<div class="main-content">
+				<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+					<ul class="breadcrumb">
+						<li><i class="icon-home home-icon"></i> <a href="#">Home</a>
+						</li>
+
+						<li><a href="#">Tables</a></li>
+						<li class="active">Simple &amp; Dynamic</li>
+					</ul>
+					<!-- .breadcrumb -->
+
+					<div class="nav-search" id="nav-search">
+						<form class="form-search">
+							<span class="input-icon"> <input type="text"
+								placeholder="Search ..." class="nav-search-input"
+								id="nav-search-input" autocomplete="off" /> <i
+								class="icon-search nav-search-icon"></i>
+							</span>
+						</form>
+					</div>
+					<!-- #nav-search -->
+				</div>
+
+				<div class="page-content">
+					<div class="page-header">
+						<h1>
+							Tables <small> <i class="icon-double-angle-right"></i>
+								Static &amp; Dynamic Tables
+							</small>
+						</h1>
+					</div>
+					<!-- /.page-header -->
+
+					<div class="row">
+						<div class="col-xs-12">
+							<!-- PAGE CONTENT BEGINS -->
+
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="table-responsive">
+										<table id="sample-table-1"
+											class="table table-striped table-bordered table-hover">
+											<thead>
+												<tr>
+													<th class="center"><label> <input
+															type="checkbox" class="ace" /> <span class="lbl"></span>
+													</label></th>
+													<th>Domain</th>
+													<th>Price</th>
+													<th class="hidden-480">Clicks</th>
+
+													<th><i class="icon-time bigger-110 hidden-480"></i>
+														Update</th>
+													<th class="hidden-480">Status</th>
+
+													<th></th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr>
+													<td class="center"><label> <input
+															type="checkbox" class="ace" /> <span class="lbl"></span>
+													</label></td>
+
+													<td><a href="#">ace.com</a></td>
+													<td>$45</td>
+													<td class="hidden-480">3,330</td>
+													<td>Feb 12</td>
+
+													<td class="hidden-480"><span
+														class="label label-sm label-warning">Expiring</span></td>
+
+													<td>
+
+														<div
+															class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+															<a class="blue" href="#"> <i
+																class="icon-zoom-in bigger-130"></i>
+															</a> <a class="green" href="#"> <i
+																class="icon-pencil bigger-130"></i>
+															</a> <a class="red" href="#"> <i
+																class="icon-trash bigger-130"></i>
+															</a>
+														</div>
+
+
+													</td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+									<!-- /.table-responsive -->
+								</div>
+								<!-- /span -->
+							</div>
+							<!-- /row -->
+
+							<div class="hr hr-18 dotted hr-double"></div>
+
+
+						</div>
+						<!-- /.modal-content -->
+
+
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.page-content -->
+
+	</div>
+	<!-- /.main-container-inner -->
+
+	<a href="#" id="btn-scroll-up"
+		class="btn-scroll-up btn btn-md btn-inverse"> <i
+		class="icon-double-angle-up icon-only bigger-110"></i>
+	</a>
+	</div>
+	<!-- /.main-container -->
+
+	<!-- basic scripts -->
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		window.jQuery
+				|| document
+						.write("<script src='js/jquery-2.0.3.min.js'>"
+								+ "<"+"script>");
+	</script>
+
+	<script type="text/javascript">
+		if ("ontouchend" in document)
+			document
+					.write("<script src='js/jquery.mobile.custom.min.js'>"
+							+ "<"+"script>");
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/typeahead-bs2.min.js"></script>
+
+	<!-- ace scripts -->
+
+	<script src="js/ace-elements.min.js"></script>
+	<script src="js/ace.min.js"></script>
+
+	<!-- inline scripts related to this page -->
+
+	<script type="text/javascript">
+			
+	</script>
+	
+</body>
+</html>
+
