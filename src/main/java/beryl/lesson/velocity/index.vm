@@ -1,5 +1,0 @@
-#define($content)
-	<h3>This is homepage</h3>
-	$name
-	$date
-#end
