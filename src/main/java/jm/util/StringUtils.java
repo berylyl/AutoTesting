@@ -11,5 +11,17 @@ public class StringUtils {
 		
 	}
 	public static void main(String[] args) {
+		
+		String user="123";
+		if(user!=null){
+			try {
+				Integer.parseInt(user);
+			} catch (NumberFormatException e) {
+				return false;
+			}
+			user = String.valueOf(UicUtil.getUserId(uicReadServiceClient,user);
+		}
 	}
+	
+	
 }

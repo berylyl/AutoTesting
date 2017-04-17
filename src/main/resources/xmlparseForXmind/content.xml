@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0"
+	xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink"
+	modified-by="" timestamp="1489125559339" version="2.0">
+	<sheet id="4dp7t6kkr6dbrttvpjcvj0eu4m" modified-by=""
+		style-id="67ppae04jlmidl474skhj0eu3s" theme="xminddefaultthemeid"
+		timestamp="1489125559339">
+		<topic id="603cl05n6lji1ecuog3luermmn" modified-by=""
+			structure-class="org.xmind.ui.map.unbalanced" timestamp="1489125559339">
+			<title>社区3月test</title>
+			<extensions>
+				<extension provider="org.xmind.ui.map.unbalanced">
+					<content>
+						<right-number>2</right-number>
+					</content>
+				</extension>
+			</extensions>
+			<children>
+				<topics type="attached">
+					<topic id="1eqk5guvfpi3upfeknspq09ha3" modified-by=""
+						timestamp="1489125111061">
+						<title>客户端</title>
+						<children>
+							<topics type="attached">
+								<topic id="0s7kaoocrm9r0bbvkho26lijkk" modified-by=""
+									timestamp="1489124982603">
+									<title>detail入口改造</title>
+									<children>
+										<topics type="attached">
+											<topic id="2i14ntb551anvsii2smqh48ebh" modified-by=""
+												timestamp="1489124927900">
+												<title>页面展示</title>
+												<children>
+													<topics type="attached">
+														<topic id="5po3e3su0mpiu935enchhiqan8" modified-by=""
+															timestamp="1488871885832">
+															<title>无问答内容时</title>
+															<children>
+																<topics type="attached">
+																	<topic id="0tv35bdcmh0ib4claumo87ormp"
+																		modified-by="" timestamp="1489124901284">
+																		<title>title：暂无问答</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																	<topic id="7ccv8v50kek6nvs07p705gri2q"
+																		modified-by="" timestamp="1489124903584">
+																		<title> 内容：宝贝好不好，问问已买的人</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																	<topic id="1t3bd2ujnm12al28jsgikcigrg"
+																		modified-by="" timestamp="1489124906241">
+																		<title> button：去提问</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+														<topic id="0kunv6r4cnsf4jvcccmd47l865" modified-by=""
+															timestamp="1488884806759">
+															<title>问答内容含优质回答时</title>
+															<children>
+																<topics type="attached">
+																	<topic id="744hvs84uovio51r7h5aiib24d"
+																		modified-by="" timestamp="1489124908306">
+																		<title> title：问大家</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																	<topic id="2k5d1b4mim0gkfq3ja2tn92bod"
+																		modified-by="" timestamp="1489124910317">
+																		<title> 内容：问（2行，icon+文案+n个回答）+答（2行，头像+文案）</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																	<topic id="25iqrbso3eft74t2l9hkbbg57o"
+																		modified-by="" timestamp="1489124914557">
+																		<title> button：全部问题（数字）</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+														<topic id="0kkcr1v1el07bs98s2b3k4fjg1" modified-by=""
+															timestamp="1488884809254">
+															<title>问答内容不含优质回答时</title>
+															<children>
+																<topics type="attached">
+																	<topic id="0saburdhk1nujnh7ldl1f7uqtg"
+																		modified-by="" timestamp="1489124917077">
+																		<title>title：问大家</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																	<topic id="3ulpdbubqgv68o7kk7qqpvk16i"
+																		modified-by="" timestamp="1489124919030">
+																		<title> 内容：问（2行，icon+文案+n个回答）X2</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																	<topic id="139pvcn3gut5cq0ll2larkc519"
+																		modified-by="" timestamp="1489124921077">
+																		<title> button：全部问题（数字）</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+													</topics>
+												</children>
+											</topic>
+											<topic id="029odgmqact7oh082vgjgkoc96" modified-by=""
+												timestamp="1489125539409">
+												<title>操作结果</title>
+												<children>
+													<topics type="attached">
+														<topic id="4u9qcoicenrqjbrf35m2leocb8" modified-by=""
+															timestamp="1489125559339">
+															<title>点击卡片进入问答列表页：UI正常展示</title>
+															<marker-refs>
+																<marker-ref marker-id="flag-green" />
+															</marker-refs>
+														</topic>
+													</topics>
+												</children>
+											</topic>
+											<topic id="6gmba7bnmmt0d6j5ppl6cfi2e3" modified-by=""
+												timestamp="1489125537007">
+												<title>数据流向测试</title>
+												<children>
+													<topics type="attached">
+														<topic id="36rkvhp4d7esrlatuea4822hlm" modified-by=""
+															timestamp="1488884838338">
+															<title>算法产生数据</title>
+															<children>
+																<topics type="attached">
+																	<topic id="43a66cttu38f8m5mgomkqocu41"
+																		modified-by="" timestamp="1489124944787">
+																		<title>服务端将DB缓存，拉取db存到Feed表里；
+																			再更新ldb到缓存，透传到客户端Detail（前两行）
+																		</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+													</topics>
+												</children>
+											</topic>
+											<topic id="7qlnlmtpencf8aj840p8cnkfpu" modified-by=""
+												timestamp="1489125528114">
+												<title>接口改造测试</title>
+												<children>
+													<topics type="attached">
+														<topic id="45cnnpr53in52gj9oq443n52ls" modified-by=""
+															timestamp="1488887292895">
+															<title>新客户端，新接口（响应入参新增两个）</title>
+															<children>
+																<topics type="attached">
+																	<topic id="0b5na534ohq0sg9ab71690q0tu"
+																		modified-by="" timestamp="1489124950017">
+																		<title>预发环境测试，可以正确响应</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+														<topic id="15h8fn1vj6lluedn0403lujdpo" modified-by=""
+															timestamp="1488887287743">
+															<title>新客户端，老接口</title>
+															<children>
+																<topics type="attached">
+																	<topic id="6u8mkl7s2ekfsinbk7rtptck47"
+																		modified-by="" timestamp="1489124953207">
+																		<title>客户端线上环境测试，可以正确响应</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+														<topic id="5qou10kd988t724ejg7u8jsueh" modified-by=""
+															timestamp="1488887283356">
+															<title>老客户端，新接口</title>
+															<children>
+																<topics type="attached">
+																	<topic id="7pjj5cqh44n62sqslkcr2dp9hk"
+																		modified-by="" timestamp="1489124955123">
+																		<title>预发环境测试，可以正确响应</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+													</topics>
+												</children>
+											</topic>
+											<topic id="0sm2d52qr2kj60m3100jtgkc29" modified-by=""
+												timestamp="1489125530747">
+												<title>异常测试</title>
+												<children>
+													<topics type="attached">
+														<topic id="58ughm2j3a0kbfh5n3gci481gr" modified-by=""
+															timestamp="1489124957957">
+															<title>缓存测试</title>
+															<marker-refs>
+																<marker-ref marker-id="flag-green" />
+															</marker-refs>
+														</topic>
+														<topic id="19hfp251up7g898rrf181an7nl" modified-by=""
+															timestamp="1489124960308">
+															<title>冷启动，热启动</title>
+															<marker-refs>
+																<marker-ref marker-id="flag-green" />
+															</marker-refs>
+														</topic>
+														<topic id="3pk60vfe0o65ua4o2tdt1qlmvg" modified-by=""
+															timestamp="1489124971852">
+															<title>断网不显示</title>
+															<marker-refs>
+																<marker-ref marker-id="flag-green" />
+															</marker-refs>
+														</topic>
+														<topic id="22ifr4h8pbs8od48fmo78g2q6e" modified-by=""
+															timestamp="1489124973931">
+															<title>接口返回错误，应用不崩溃</title>
+															<marker-refs>
+																<marker-ref marker-id="flag-green" />
+															</marker-refs>
+														</topic>
+													</topics>
+												</children>
+											</topic>
+										</topics>
+									</children>
+									<marker-refs>
+										<marker-ref marker-id="flag-blue" />
+									</marker-refs>
+								</topic>
+							</topics>
+						</children>
+					</topic>
+					<topic id="601p7rlbjgou1i250e19kda96d" modified-by=""
+						timestamp="1489125111061">
+						<title>测试套2</title>
+						<children>
+							<topics type="attached">
+								<topic id="6b873dd3r30nao1o66rlk90keo" modified-by=""
+									timestamp="1488530316990">
+									<title>21_步骤分支</title>
+									<marker-refs>
+										<marker-ref marker-id="flag-blue" />
+									</marker-refs>
+									<children>
+										<topics type="attached">
+											<topic id="0kafotmhan63qr7n3plnlr4b9b" modified-by=""
+												timestamp="1488530273279">
+												<title>步骤一</title>
+												<children>
+													<topics type="attached">
+														<topic id="5eld9ikiqr5i67omn93gddoge5" modified-by=""
+															timestamp="1488530282016">
+															<title>步骤2</title>
+															<children>
+																<topics type="attached">
+																	<topic id="6gqgnsa2u016avgh0liauaavgg"
+																		modified-by="" timestamp="1488530298922">
+																		<title>结果1</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																	<topic id="6ptlgon47eo0e4fc7h407iadf6"
+																		modified-by="" timestamp="1488530300619">
+																		<title>结果2</title>
+																		<marker-refs>
+																			<marker-ref marker-id="flag-green" />
+																		</marker-refs>
+																	</topic>
+																</topics>
+															</children>
+														</topic>
+													</topics>
+												</children>
+											</topic>
+											<topic id="4jvpe39047ktg74fo4rrdi9lmb" modified-by=""
+												timestamp="1488530291997">
+												<title>步骤3</title>
+												<children>
+													<topics type="attached">
+														<topic id="5rl4qdsi7tkc48j16n8b1mp8hp" modified-by=""
+															timestamp="1488530302501">
+															<title>结果3</title>
+															<marker-refs>
+																<marker-ref marker-id="flag-green" />
+															</marker-refs>
+														</topic>
+														<topic id="5rl4qdsi7tkc48j16n8b1mp8hp" modified-by=""
+															timestamp="1488530302501">
+															<title>结果3</title>
+															<marker-refs>
+																<marker-ref marker-id="flag-green" />
+															</marker-refs>
+														</topic>
+													</topics>
+												</children>
+											</topic>
+										</topics>
+									</children>
+								</topic>
+								<topic id="600coi160tojbgpfs1tjeqiho5" modified-by=""
+									timestamp="1488530323717">
+									<title>22_步骤分支</title>
+									<marker-refs>
+										<marker-ref marker-id="flag-blue" />
+									</marker-refs>
+									<children>
+										<topics type="attached">
+											<topic id="6bi412i4hu5r7op73ef22so2jm" modified-by=""
+												timestamp="1488530331376">
+												<title>结果99999</title>
+												<marker-refs>
+													<marker-ref marker-id="flag-green" />
+												</marker-refs>
+											</topic>
+										</topics>
+									</children>
+								</topic>
+							</topics>
+						</children>
+					</topic>
+				</topics>
+			</children>
+		</topic>
+		<title>画布 1</title>
+	</sheet>
+</xmap-content>

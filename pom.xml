@@ -273,7 +273,43 @@
 			<version>1.4.01</version>
 		</dependency>
 		<!-- xmpapis end -->
+
+		<!-- ddmlib begin -->
+		<dependency>
+			<groupId>com.android.ddmlib</groupId>
+			<artifactId>ddmlib</artifactId>
+			<version>r16</version>
+		</dependency>
+		<!-- ddmlib end -->
+
+		<!-- uiautomator begin -->
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>uiautomator</artifactId>
+			<version>6.0</version>
+		</dependency>
+		<!-- uiautomator end -->
+
+		<!-- android begin -->
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<version>4.1.1.4</version>
+		</dependency>
+		<!-- android end -->
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+
 	</dependencies>
+
+
+
 
 
 

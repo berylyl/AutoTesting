@@ -1,14 +1,10 @@
 package jm.jenkins.service;
-import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.management.JMException;
 
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
 import org.dom4j.Document;
 
 import jm.bean.User;
